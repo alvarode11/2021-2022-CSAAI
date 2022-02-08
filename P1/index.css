@@ -4,27 +4,30 @@ body{
  
  /*Aquí modifico el párrafo p1*/
  p1{
-     padding: 5px;  /* relleno */
-     margin: 10px;  /* Margen */
-     border: solid rgb(0, 255, 213);
-     font-size: medium;
- }
+    padding: 5px;  /* relleno */
+    margin: 10px;  /* Margen */
+    border: solid;
+    border-color: rgb(0, 255, 213);
+    font-size: medium;
+}
+ 
  /* Estilo de la caja lateral*/
  left{
-    border-radius: 20px;
-    width: 30%;
-    border:solid rgb(0, 255, 213);
+    width:30%;
+    border: 10px double;
+    margin: 0px;
+    padding: 10px;
+    text-align: justify;
     float: left;
-    margin-bottom: 2%;
- }
- /*Estilo de la caja principal*/
- right{
-     border: solid rgb(0, 255, 213);;
-     width: 65%;
-     float: right;
-     color: white;
- /*Estilo de la foto de carnet*/
- }
+    color: rgb(0, 255, 213);
+}
+/*Estilo de la caja principal*/
+right{
+    border: 10px double;
+    width: 65%;
+    float: right;
+    color: rgb(0, 255, 213);
+}
  .imagen{
      margin-left: 3cm;
  }
