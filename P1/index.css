@@ -1,0 +1,53 @@
+body{
+    background-image: url('fondo.jpg');
+    }
+ 
+ /*Aquí modifico el párrafo p1*/
+ p1{
+     padding: 5px;  /* relleno */
+     margin: 10px;  /* Margen */
+     border: solid;
+     border-color: white;
+     font-size: medium;
+ }
+ /* Estilo de la caja lateral*/
+ left{
+     width:30%;
+     border: 10px double;
+     margin: 0px;
+     padding: 10px;
+     text-align: justify;
+     float: left;
+     color: white;
+ }
+ /*Estilo de la caja principal*/
+ right{
+     border: 10px double;
+     width: 65%;
+     float: right;
+     color: white;
+ /*Estilo de la foto de carnet*/
+ }
+ .imagen{
+     margin-left: 3cm;
+ }
+ .padding{
+     border: 10px double;
+     margin: 0px;
+     padding: 10px;
+     text-align: justify;
+     color: white;
+ }
+ /*Definimos los títulos*/
+ .title{
+     font-size: x-large;
+     color:blue;
+     text-align: center;
+     font-family: monospace;
+     font-size: xx-large;
+ }
+ .bailoteo{
+    position:absolute;
+    right: 200px;
+    top:570px;
+}
