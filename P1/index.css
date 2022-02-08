@@ -13,7 +13,7 @@ body{
  /* Estilo de la caja lateral*/
  left{
      width:30%;
-     border: 10px double;
+     border: 10px triple;
      margin: 0px;
      padding: 10px;
      text-align: justify;
@@ -22,7 +22,7 @@ body{
  }
  /*Estilo de la caja principal*/
  right{
-     border: 10px double;
+     border: 10px triple;
      width: 65%;
      float: right;
      color: white;
@@ -32,7 +32,7 @@ body{
      margin-left: 3cm;
  }
  .padding{
-     border: 10px double;
+     border: 10px triple;
      margin: 0px;
      padding: 10px;
      text-align: justify;
@@ -48,6 +48,6 @@ body{
  }
  .bailoteo{
     position:absolute;
-    left: 200px;
-    top:570px;
+    left: 250px;
+    top:470px;
 }
