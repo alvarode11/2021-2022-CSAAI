@@ -11,13 +11,11 @@ body{
  }
  /* Estilo de la caja lateral*/
  left{
-     width:30%;
-     border: solid rgb(0, 255, 213);;
-     margin: 10px;
-     padding: 10px;
-     text-align: justify;
-     float: left;
-     color: white;
+    border-radius: 20px;
+    width: 30%;
+    border:solid rgb(0, 255, 213);
+    float: left;
+    margin-bottom: 2%;
  }
  /*Estilo de la caja principal*/
  right{
