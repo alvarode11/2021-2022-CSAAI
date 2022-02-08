@@ -6,14 +6,13 @@ body{
  p1{
      padding: 5px;  /* relleno */
      margin: 10px;  /* Margen */
-     border: solid;
-     border-color: white;
+     border: solid rgb(0, 255, 213);
      font-size: medium;
  }
  /* Estilo de la caja lateral*/
  left{
      width:30%;
-     border: 10px triple;
+     border: 10px solid rgb(0, 255, 213);;
      margin: 0px;
      padding: 10px;
      text-align: justify;
@@ -22,7 +21,7 @@ body{
  }
  /*Estilo de la caja principal*/
  right{
-     border: 10px triple;
+     border: 10px solid rgb(0, 255, 213);;
      width: 65%;
      float: right;
      color: white;
@@ -32,7 +31,7 @@ body{
      margin-left: 3cm;
  }
  .padding{
-     border: 10px triple;
+     border: 10px solid rgb(0, 255, 213);
      margin: 0px;
      padding: 10px;
      text-align: justify;
