@@ -3,7 +3,7 @@ body{
     }
  
  /*Aquí modifico el párrafo p1*/
- p1{
+ .texto{
     padding: 5px;  /* relleno */
     margin: 10px;  /* Margen */
     border: solid;
