@@ -1,7 +1,20 @@
 body{
     background-image: url('fondo.jpg');
     }
- 
+
+
+h1{
+    text-align: center;
+    color: rgb(0, 255, 213);
+}
+
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+
 
  .texto{
     padding: 5px;  
@@ -24,7 +37,7 @@ body{
 }
 
 right{
-    width:30%;
+    width:100px;
     border: white 8px groove;
     margin: 0px;
     padding: 10px;
