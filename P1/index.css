@@ -66,6 +66,12 @@ right{
  }
  .bailoteo{
     position:absolute;
-    right: 200px;
+    left: 200px;
     top:470px;
+}
+
+.imagen{
+    position:absolute;
+    left: 100px;
+    top:970px;
 }
