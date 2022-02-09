@@ -16,11 +16,10 @@ h2{
 
 
 
- .texto{
+ p1{
     padding: 5px;  
     margin: 10px;  
     border: rgb(0, 255, 213) 8px groove;
-    border-color: white;
     color: white;
     font-size: medium;
 }
@@ -57,7 +56,7 @@ right{
      color: white;
  }
 
- 
+
  .title{
      font-size: x-large;
      color:rgb(0, 255, 213);
