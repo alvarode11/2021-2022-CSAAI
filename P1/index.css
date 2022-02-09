@@ -24,9 +24,12 @@ body{
 }
 
 right{
+    width:30%;
     border: white 8px groove;
-    width: 65%;
-    float: right;
+    margin: 0px;
+    padding: 10px;
+    text-align: justify;
+    float: left;
     color: rgb(0, 255, 213);
 }
  .imagen{
