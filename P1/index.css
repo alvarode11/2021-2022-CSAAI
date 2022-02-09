@@ -2,29 +2,29 @@ body{
     background-image: url('fondo.jpg');
     }
  
- /*Aquí modifico el párrafo p1*/
+
  .texto{
-    padding: 5px;  /* relleno */
-    margin: 10px;  /* Margen */
-    border: solid;
+    padding: 5px;  
+    margin: 10px;  
+    border: white 8px groove;
     border-color: white;
     color: white;
     font-size: medium;
 }
  
- /* Estilo de la caja lateral*/
+
  left{
     width:30%;
-    border: 10px double;
+    border: white 8px groove;
     margin: 0px;
     padding: 10px;
     text-align: justify;
     float: left;
     color: rgb(0, 255, 213);
 }
-/*Estilo de la caja principal*/
+
 right{
-    border: 10px double;
+    border: white 8px groove;
     width: 65%;
     float: right;
     color: rgb(0, 255, 213);
@@ -33,13 +33,13 @@ right{
      margin-left: 3cm;
  }
  .padding{
-     border: solid rgb(0, 255, 213);
+     border: white 8px groove;
      margin: 10px;
      padding: 10px;
      text-align: justify;
      color: white;
  }
- /*Definimos los títulos*/
+
  .title{
      font-size: x-large;
      color:rgb(0, 255, 213);
