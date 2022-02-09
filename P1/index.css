@@ -64,4 +64,8 @@ right{
      font-family: monospace;
      font-size: xx-large;
  }
- 
+ .bailoteo{
+    position:absolute;
+    right: 200px;
+    top:470px;
+}
