@@ -83,3 +83,10 @@ right{
     color: rgb(0, 255, 213);
     font-size: medium;
 }
+
+
+.imagen2{
+    position:absolute;
+    bottom:-470px;
+    right:12.5%;
+}
