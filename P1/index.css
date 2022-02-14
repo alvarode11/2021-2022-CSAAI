@@ -1,15 +1,41 @@
+
+@font-face
+{
+    font-family: 'Charming';
+    src: url(Retrolab.ttf)
+}
+
+
+@font-face
+{
+    font-family: 'German';
+    src: url(THE\ THREE.ttf)
+}
+
+
+@font-face
+{
+    font-family: 'Elegant';
+    src: url(Bau\ Asem.ttf)
+
+}
+
+
 body{
     background-image: url('fondo.jpg');
     }
 
 
 h1{
+    font-family: 'Charming';
+    font-size: 135px;
     text-align: center;
     color: rgb(0, 255, 213);
 }
 
 
 h2{
+    font-family: 'Elegant';
     color: white;
     text-align: center;
 }
@@ -19,9 +45,8 @@ h2{
  p1{
     padding: 5px;  
     margin: 10px;  
-    border: rgb(0, 255, 213) 8px groove;
     color: white;
-    font-size: medium;
+    font-size: large;
 }
  
 
@@ -54,26 +79,27 @@ right{
      padding: 10px;
      text-align: justify;
      color: white;
+     font-size: large;
  }
 
 
  .title{
-     font-size: x-large;
+    font-family: 'Charming';
+    font-size: 50px;
      color:rgb(0, 255, 213);
      text-align: center;
-     font-family: monospace;
-     font-size: xx-large;
+     
  }
 .bailecito{
     position:absolute;
-    bottom:-452px;
+    bottom:-950px;
     position:absolute;
     left:18.5%;
  }
 
 .imagen1{
     position:absolute;
-    bottom:0px;
+    bottom:-230px;
     left:10.5%;
 }
 
@@ -81,7 +107,7 @@ right{
     padding: 5px;  
     margin: 10px;  
     color: rgb(0, 255, 213);
-    font-size: medium;
+    font-size: large;
 }
 
 
@@ -94,9 +120,10 @@ right{
   }
 
   .MASGRANDE{
+    font-family: 'Elegant';
+    font-size: X-large;
     color: white;
     text-align: center;
-    font-size: x-large;
 }
 .imagen3{
     display: inline-block;
