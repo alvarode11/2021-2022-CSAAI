@@ -1,21 +1,12 @@
-
 @font-face
 {
-    font-family: 'Charming';
+    font-family: 'TITULO';
     src: url(Retrolab.ttf)
 }
 
-
 @font-face
 {
-    font-family: 'German';
-    src: url(THE\ THREE.ttf)
-}
-
-
-@font-face
-{
-    font-family: 'Elegant';
+    font-family: 'tittle';
     src: url(Bau\ Asem.ttf)
 
 }
@@ -27,15 +18,16 @@ body{
 
 
 h1{
-    font-family: 'Charming';
+    font-family: 'TITULO';
     font-size: 135px;
     text-align: center;
     color: rgb(0, 255, 213);
+    text-decoration: underline rgb(0, 255, 213);
 }
 
 
 h2{
-    font-family: 'Elegant';
+    font-family: 'tittle';
     color: white;
     text-align: center;
 }
@@ -43,16 +35,17 @@ h2{
 
 
  p1{
+    font-family: 'tittle';
     padding: 5px;  
     margin: 10px;  
     color: white;
-    font-size: large;
+    font-size: medium;
 }
  
 
  left{
     width:30%;
-    border: rgb(0, 255, 213) 8px groove;
+    border: rgb(0, 255, 213) 8px ridge;
     margin: 0px;
     padding: 10px;
     text-align: justify;
@@ -61,7 +54,7 @@ h2{
 }
 
 right{
-    border: rgb(0, 255, 213) 8px groove;
+    border: rgb(0, 255, 213) 8px ridge;
     width: 65%;
     float: right;
     color: white;
@@ -74,7 +67,7 @@ right{
 
 
  .padding{
-     border: rgb(0, 255, 213) 8px groove;
+     border: rgb(0, 255, 213) 8px ridge;
      margin: 10px;
      padding: 10px;
      text-align: justify;
@@ -84,22 +77,23 @@ right{
 
 
  .title{
-    font-family: 'Charming';
+    font-family: 'TITULO';
     font-size: 50px;
      color:rgb(0, 255, 213);
      text-align: center;
+     text-decoration: underline rgb(0, 255, 213);
      
  }
 .bailecito{
     position:absolute;
-    bottom:-950px;
+    bottom:-1040px;
     position:absolute;
     left:18.5%;
  }
 
 .imagen1{
     position:absolute;
-    bottom:-230px;
+    bottom:-320px;
     left:10.5%;
 }
 
@@ -114,21 +108,53 @@ right{
 .imagen2{
     display: inline-block;
     position: absolute;
-    bottom:-575px;
-    right:35%;
+    bottom:-1050px;
+    right:45%;
     border-radius: 50%;
   }
 
   .MASGRANDE{
-    font-family: 'Elegant';
+    font-family: 'tittle';
     font-size: X-large;
     color: white;
     text-align: center;
 }
+
+
 .imagen3{
     display: inline-block;
     position: absolute;
-    bottom:-575px;
-    right:5%;
+    bottom:-1050px;
+    right:10%;
     border-radius: 50%;
   }
+
+.imagen4{
+display: inline-block;
+position: absolute;
+bottom:-100px;
+right:50%;
+border-radius: 50%;
+}
+
+.imagen5{
+    display: inline-block;
+    position: absolute;
+    bottom:-100px;
+    right:4%;
+    border-radius: 50%;
+    }
+
+.imagen6{
+    display: inline-block;
+    position: absolute;
+    bottom:-630px;
+    right:4%; 
+}
+
+.imagen7{
+    display: inline-block;
+    position: absolute;
+    bottom:-630px;
+    right:45%;
+    }
