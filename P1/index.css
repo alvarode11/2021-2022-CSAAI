@@ -1,3 +1,15 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    }
+
+
 @font-face
 {
     font-family: 'TITULO';
@@ -34,23 +46,23 @@ h2{
 
 
 
- p1{
-    font-family: 'tittle';
-    padding: 5px;  
-    margin: 10px;  
-    color: white;
-    font-size: medium;
+p1{
+font-family: 'tittle';
+padding: 5px;  
+margin: 10px;  
+color: white;
+font-size: medium;
 }
- 
 
- left{
-    width:30%;
-    border: rgb(0, 255, 213) 8px ridge;
-    margin: 0px;
-    padding: 10px;
-    text-align: justify;
-    float: left;
-    color: rgb(255, 255, 255);
+
+left{
+width:30%;
+border: rgb(0, 255, 213) 8px ridge;
+margin: 0px;
+padding: 10px;
+text-align: justify;
+float: left;
+color: rgb(255, 255, 255);
 }
 
 right{
@@ -61,41 +73,51 @@ right{
 }
 
 
- .imagen{
-     margin-left: 3cm;
+.imagen{
+    margin-left: 3cm;
+}
+
+
+.padding{
+    border: rgb(0, 255, 213) 8px ridge;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    color: white;
+    font-size: large;
+}
+
+
+.title{
+font-family: 'TITULO';
+font-size: 50px;
+    color:rgb(0, 255, 213);
+    text-align: center;
+    text-decoration: underline rgb(0, 255, 213);
+    
  }
 
-
- .padding{
-     border: rgb(0, 255, 213) 8px ridge;
-     margin: 10px;
-     padding: 10px;
-     text-align: justify;
-     color: white;
-     font-size: large;
- }
-
-
- .title{
-    font-family: 'TITULO';
-    font-size: 50px;
-     color:rgb(0, 255, 213);
-     text-align: center;
-     text-decoration: underline rgb(0, 255, 213);
+ .imagen1{
+    position:relative;
+    
+    left:45%;
+   
      
  }
-.bailecito{
-    position:absolute;
-    bottom:-1040px;
-    position:absolute;
-    left:18.5%;
+
+ .bailoteo{
+    position:relative;
+    float :left; 
  }
 
-.imagen1{
-    position:absolute;
-    bottom:-320px;
-    left:10.5%;
-}
+
+.bailecito{
+    position:relative;
+    left:10%;
+    
+    
+ }
+
 
 .link{
     padding: 5px;  
@@ -106,25 +128,26 @@ right{
 
 
 .imagen2{
-    display: inline-block;
+   
     position: absolute;
-    bottom:-1050px;
+    bottom:-130%;
     right:45%;
     border-radius: 50%;
+    
   }
 
-  .MASGRANDE{
-    font-family: 'tittle';
-    font-size: X-large;
-    color: white;
-    text-align: center;
+.MASGRANDE{
+font-family: 'tittle';
+font-size: X-large;
+color: white;
+text-align: center;
 }
 
 
 .imagen3{
     display: inline-block;
     position: absolute;
-    bottom:-1050px;
+    bottom:-130%;
     right:10%;
     border-radius: 50%;
   }
@@ -132,7 +155,7 @@ right{
 .imagen4{
 display: inline-block;
 position: absolute;
-bottom:-100px;
+bottom:28%;
 right:50%;
 border-radius: 50%;
 }
@@ -140,7 +163,7 @@ border-radius: 50%;
 .imagen5{
     display: inline-block;
     position: absolute;
-    bottom:-100px;
+    bottom:27%;
     right:4%;
     border-radius: 50%;
     }
@@ -148,13 +171,13 @@ border-radius: 50%;
 .imagen6{
     display: inline-block;
     position: absolute;
-    bottom:-630px;
+    bottom:-70%;
     right:4%; 
 }
 
 .imagen7{
     display: inline-block;
     position: absolute;
-    bottom:-630px;
+    bottom:-70%;
     right:45%;
     }
