@@ -106,15 +106,19 @@ right{
  }
 
  .bailoteo{
-    position:relative;
-    float :left; 
+    /*position:relative;*/
+    /*float :left;*/ 
     box-shadow: 0 0 7px 7px rgba(0, 255, 213, 2.5);
+    width: 40%;
  }
 
 
 .bailecito{
-    position:relative;
-    left:10%;
+    /*position:relative;
+    float :left;*/
+    /*margin-left: 3%;*/
+    width: 40%;
+    float: right;
     box-shadow: 0 0 7px 7px rgba(0, 255, 213, 2.5);
  }
 
