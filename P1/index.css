@@ -226,6 +226,7 @@ right{
 }
 
 @media screen and (max-width: 600px) {
+
     .left {
       width: 100%;
     }
@@ -235,47 +236,55 @@ right{
     }
 
 
-    .imagenes {
+    #foto1 {
         width: 100%;
       }
   
-      .imagen {
-          width: 100%;
-      }
+    #foto2 {
+    width: 100%;
+    }
 
-
-
-      .imagen1 {
+    .imagen {
         width: 100%;
-      }
-  
-      .imagen2 {
-          width: 100%;
-      }
+    }
 
 
 
-      .imagen3 {
+    .imagen1 {
+    width: 100%;
+    }
+
+    .imagen2 {
         width: 100%;
-      }
-  
-      .imagen4 {
-          width: 100%;
-      }
+    }
 
 
 
-      .imagen5 {
+    .imagen3 {
+    width: 100%;
+    }
+
+    .imagen4 {
         width: 100%;
-      }
-  
-      .imagen6 {
-          width: 100%;
-      }
+    }
 
 
-      .imagen7 {
+
+    .imagen5 {
+    width: 100%;
+    }
+
+    .imagen6 {
         width: 100%;
-      }
+    }
+
+
+    .imagen7 {
+    width: 100%;
+    }
+
+    .padding {
+        width: 100%;
+        }
 
 }
