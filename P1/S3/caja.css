@@ -1,7 +1,9 @@
+/* Propiedades de la caja del cuerpo */
 body {
     padding: 0px;
-    margin: 0px;
-    border: none;
+    margin: 10px;  /* Margen */
+    border: solid;
+    border-color: red;
   }
   
   /*  Propiedades de la caja del párrafo */
