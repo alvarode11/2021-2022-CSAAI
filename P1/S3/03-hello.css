@@ -11,3 +11,9 @@ body {
   p {
     background-color: orange;
   }
+  
+  /* Estilo Solo para el párrafo "especial" */
+  #especial {
+    background-color: green;
+    color: white;
+  }
