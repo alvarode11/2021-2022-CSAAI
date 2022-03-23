@@ -1,10 +1,4 @@
 
-@media (max-width: 800px) {
-    .sidebar {
-      display: none;
-    }
-  }
-
 
 * {
     box-sizing: border-box;
@@ -41,7 +35,7 @@ body{
 
 h1{
     font-family: 'TITULO';
-    font-size: 135px;
+    font-size: 650%;
     text-align: center;
     color: rgb(0, 255, 213);
     text-decoration: underline rgb(0, 255, 213);
@@ -74,6 +68,7 @@ left{
     text-align: justify;
     float: left;
     color: rgb(255, 255, 255);
+    min-height: 500px;
 
 }
 
@@ -83,6 +78,7 @@ right{
     width: 65%;
     float: right;
     color: white;
+    min-height: 500px;
 
 }
 
@@ -111,7 +107,7 @@ right{
 
     font-family: 'TITULO';
     margin-bottom: 3.5%;
-    font-size: 50px;
+    font-size: 300%;
     color:rgb(0, 255, 213);
     text-align: center;
     text-decoration: underline rgb(0, 255, 213);
@@ -135,11 +131,8 @@ right{
 #foto{
 
     max-width: 60%;
-    height: auto;
     margin: 20px;
-    
     display: inline-block;
-    margin: auto;
     box-shadow: 0 0 7px 7px rgba(0, 255, 213, 2.5);
 
 }
@@ -147,11 +140,8 @@ right{
 #foto2{
 
     max-width: 40%;
-    height: auto;
     margin: 20px;
-    
     display: inline-block;
-    margin: auto;
     box-shadow: 0 0 7px 7px rgba(0, 255, 213, 2.5);
 
 }
@@ -233,4 +223,68 @@ right{
     margin-right: 3%;
     margin-top: 2%
     
+}
+
+@media screen and (max-width: 600px) {
+
+    .left {
+      width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+
+    #foto1 {
+        width: 100%;
+      }
+  
+    #foto2 {
+    width: 100%;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+
+
+    .imagen1 {
+    width: 100%;
+    }
+
+    .imagen2 {
+        width: 100%;
+    }
+
+
+
+    .imagen3 {
+    width: 100%;
+    }
+
+    .imagen4 {
+        width: 100%;
+    }
+
+
+
+    .imagen5 {
+    width: 100%;
+    }
+
+    .imagen6 {
+        width: 100%;
+    }
+
+
+    .imagen7 {
+    width: 100%;
+    }
+
+    .padding {
+        width: 100%;
+        }
+
 }
