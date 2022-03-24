@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0""&amp;gt;>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATORE</title>
     <link rel="icon" type="image/x-icon" href="icono.png">
     <link rel="stylesheet" href="index.css">
@@ -17,15 +17,13 @@
 <body> 
 <div class="Calculadora"> 
 <table>
-    <tr >
-        <td> 
-            <table>
-                <form name="formi" action="" method=""> 
-                <th colspan="0" >
+    
+                <form> 
+                <th>
                     <input type="text" id="resul" value="" style="text-align:right" disabled readonly="readonly" name="ver"/></th> 
                     <tr><b> 
                         <td width="34"><b><b> 
-                            <input id="borrar" type="button" name="c" value="C" class="imagenbotom" disabled style="text-align:center"  /> 
+                            <input id="borrar" type="button" name="c" value="AC" class="imagenbotom" disabled style="text-align:center"  /> 
                         </b></b></td> 
                         </b>
                         <td width="33">
@@ -49,10 +47,10 @@
                         <td>
                             <input  id="nueve" type="button" name="numero" value="9" onclick="" class="imagenbotom" disabled style="text-align:center"/>
                         </td> 
-                        <td rowspan="2">
+                        <td>
                             <input id="sumar" type="button" size="20" name="op" value="+" class="imagenespecial" disabled style="text-align:center" />
                         </td> 
-                        <td rowspan="2">
+                        <td >
                             <input id="on" type="button" size="20" name="on" value="ON" class="imagenespecial" style="text-align:center" />
                         </td> 
                     </tr> 
@@ -77,7 +75,7 @@
                         <td>
                             <input id="tres" type="button" name="numero" value="3"  class="imagenbotom" disabled style="text-align:center"/>
                         </td>
-                        <td rowspan="2">
+                        <td>
                             <input id="igual" type="button" name="igual" value="=" class="imagenespecial" disabled style="text-align:center" />
                         </td>
                         <td>
@@ -85,7 +83,7 @@
                         </td>
                     </tr> 
                     <tr>
-                        <td colspan="2">
+                        <td>
                             <input id="cero" type="button" name="numero" value="0" class="especialimagen" disabled style="text-align:center" />
                         </td>
                         <td>
@@ -93,7 +91,7 @@
                         </td>
                     </tr> 
 </form> 
-</table></td></tr></table> 
+</table>
 </div> 
 </body> 
 </html> 

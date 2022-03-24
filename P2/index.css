@@ -1,3 +1,10 @@
+
+*{
+  margin: 0;
+  padding : 0;
+}
+
+
 body{
 
     background-image: url('calculo.jpg');
@@ -6,151 +13,40 @@ body{
 
 
 .Calculadora{
-    width:30%;
-    margin-left: 20%;
-    margin-top: 20%;
-    padding: 10px;
-    text-align: justify;
+    width:5%;
+    margin-left: 10%;
+    margin-top: 0%;
+    padding: 100px;
+    text-align: center;
     float: left;
     color: rgb(255, 255, 255);
     min-height: 500px;
 }
 
 table {
-    width: 60%;
-    border: rgb(255, 0, 255) 8px ridge;
+    padding: 20%;
+    background-color: rgb(28, 60, 78);
     box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+    border: rgb(0, 255, 255) 8px ridge;
+    border-radius: 10%;
   }
 
-  #borrar{
-    margin: 10%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-  #div{
-    margin: 10%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
 
-  #multi{
-    margin: 10%;
-    width: 70%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
+input{
+  text-align: center;
+  width: 90px; 
+  height: 90px; 
+  padding: 4px; 
+  margin: 2px;
+  margin-right: 2px; 
+  margin-bottom: 4px; 
+  margin-inline-end: 2px; 
+  font-size: x-large;
+  background-color: rgb(109, 135, 151);
+}
 
-  #rest{
-    margin: 10%;
-    width: 100%;;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #siete{
-    margin: 10%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #ocho{
-    margin: 10%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #nueve{
-
-    width: 70%;
-    margin: 10%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #sumar{
-    margin: 0%;
-    width: 100%;  
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #on{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #cuatro{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #cinco{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #seis{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #uno{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #dos{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #tres{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #igual{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #apagar{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #cero{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
-
-  #punto{
-    margin: 2%;
-    width: 100%;
-    display: inline-block;
-    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-  }
+input#resul{
+  width: 500%; 
+  font-size: xx-large;
+  background-color: rgb(178, 190, 197);
+}
