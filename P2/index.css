@@ -6,9 +6,151 @@ body{
 
 
 .Calculadora{
-    font-family: 'TITULO';
-    font-size: 650%;
-    text-align: center;
-    color: rgb(0, 255, 213);
-    text-decoration: underline rgb(0, 255, 213);
+    width:30%;
+    margin-left: 20%;
+    margin-top: 20%;
+    padding: 10px;
+    text-align: justify;
+    float: left;
+    color: rgb(255, 255, 255);
+    min-height: 500px;
 }
+
+table {
+    width: 60%;
+    border: rgb(255, 0, 255) 8px ridge;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #borrar{
+    margin: 10%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+  #div{
+    margin: 10%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #multi{
+    margin: 10%;
+    width: 70%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #rest{
+    margin: 10%;
+    width: 100%;;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #siete{
+    margin: 10%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #ocho{
+    margin: 10%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #nueve{
+
+    width: 70%;
+    margin: 10%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #sumar{
+    margin: 0%;
+    width: 100%;  
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #on{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #cuatro{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #cinco{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #seis{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #uno{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #dos{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #tres{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #igual{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #apagar{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #cero{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
+
+  #punto{
+    margin: 2%;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+  }
