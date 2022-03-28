@@ -22,19 +22,22 @@
                 <th>
                     <input type="text" id="resul" value="" style="text-align:right" disabled readonly="readonly" name="ver"/></th> 
                     <tr><b> 
-                        <td width="34"><b><b> 
+                        <td >
+                            <input id="on" type="button" size="20" name="on" value="ON" class="imagenespecial" style="text-align:center" />
+                        </td> 
+                        <td>
+                            <input id="apagar" type="button" size="20" name="off" value="OFF" class="imagenespecial" disabled style="text-align:center" />
+                        </td>
+                        <td > 
                             <input id="borrar" type="button" name="c" value="AC" class="imagenbotom" disabled style="text-align:center"  /> 
-                        </b></b></td> 
+                        </td> 
+                        <td > 
+                            <input id="delete" type="button" name="del" value="DEL" class="imagenbotom" disabled style="text-align:center"  /> 
+                        </td> 
                         </b>
-                        <td width="33">
-                            <input id="div" type="button" name="op" value="/" class="imagenbotom" disabled style="text-align:center"  />
-                        </td>
-                        <td width="33">
-                            <input id="multi" type="button" name="op" value="*" class="imagenbotom" disabled style="text-align:center" />
-                        </td>
-                        <td width="31">
-                            <input id="rest" type="button" name="op" value="-" class="imagenbotom" disabled style="text-align:center" />
-                        </td>
+                        
+                        
+                        
                     </tr> 
 
                     <tr>
@@ -50,9 +53,7 @@
                         <td>
                             <input id="sumar" type="button" size="20" name="op" value="+" class="imagenespecial" disabled style="text-align:center" />
                         </td> 
-                        <td >
-                            <input id="on" type="button" size="20" name="on" value="ON" class="imagenespecial" style="text-align:center" />
-                        </td> 
+                        
                     </tr> 
                     <tr>
                         <td>
@@ -63,6 +64,9 @@
                         </td>
                         <td>
                             <input id="seis" type="button" name="numero"  value="6" class="imagenbotom" disabled style="text-align:center"/>
+                        </td>
+                        <td>
+                            <input id="rest" type="button" name="op" value="-" class="imagenbotom" disabled style="text-align:center" />
                         </td>
                     </tr> 
                     <tr>
@@ -75,12 +79,11 @@
                         <td>
                             <input id="tres" type="button" name="numero" value="3"  class="imagenbotom" disabled style="text-align:center"/>
                         </td>
-                        <td>
-                            <input id="igual" type="button" name="igual" value="=" class="imagenespecial" disabled style="text-align:center" />
+                        <td >
+                            <input id="multi" type="button" name="op" value="*" class="imagenbotom" disabled style="text-align:center" />
                         </td>
-                        <td>
-                            <input id="apagar" type="button" size="20" name="off" value="OFF" class="imagenespecial" disabled style="text-align:center" />
-                        </td>
+                        
+                        
                     </tr> 
                     <tr>
                         <td>
@@ -88,6 +91,12 @@
                         </td>
                         <td>
                             <input id="punto" type="button" name="numero" value="." class="imagenbotom" disabled style="text-align:center" />
+                        </td>
+                        <td>
+                            <input id="igual" type="button" name="igual" value="=" class="imagenespecial" disabled style="text-align:center" />
+                        </td>
+                        <td>
+                            <input id="div" type="button" name="op" value="/" class="imagenbotom" disabled style="text-align:center"  />
                         </td>
                     </tr> 
 </form> 

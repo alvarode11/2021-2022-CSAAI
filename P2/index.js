@@ -9,6 +9,10 @@ on.onclick = borrarC;
 var on = document.getElementById("on");
 on.onclick = encender;
 
+var on = document.getElementById("delete");
+on.onclick = borrarnum;
+
+
 var off = document.getElementById("apagar");
 off.onclick = apagar;
 
@@ -94,6 +98,10 @@ cambio=true;
 function borrar() {
 document.getElementById("resul").value = " ";
 }
+
+function borrarnum() {
+    document.getElementById("resul").value = document.getElementById("resul").value.slice(0, -1);
+    }
 
 function borrarC() {
 document.getElementById("resul").value = "";

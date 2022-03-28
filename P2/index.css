@@ -34,7 +34,7 @@ table {
 
 input{
   text-align: center;
-  width: 90px; 
+  width: 130px; 
   height: 90px; 
   padding: 4px; 
   margin: 2px;
@@ -46,7 +46,8 @@ input{
 }
 
 input#resul{
-  width: 500%; 
+  width: 390%; 
   font-size: xx-large;
   background-color: rgb(178, 190, 197);
+  
 }
