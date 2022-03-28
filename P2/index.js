@@ -101,7 +101,7 @@ document.getElementById("resul").value = " ";
 
 function borrarnum() {
     document.getElementById("resul").value = document.getElementById("resul").value.slice(0, -1);
-    }
+}
 
 function borrarC() {
 document.getElementById("resul").value = "";
@@ -117,7 +117,6 @@ document.getElementById("resul").value += this.value;
 
 
 function encender() {
-
 var cosas = document.getElementsByTagName("input");
 for (var i = 0; i < cosas.length; i++) {
     cosas[i].disabled = false;
@@ -127,7 +126,6 @@ document.getElementById("on").disabled = true;
 }
 
 function apagar() {
-
 var cosas = document.getElementsByTagName("input");
 for (var i = 0; i < cosas.length; i++) {
     cosas[i].disabled = true;
