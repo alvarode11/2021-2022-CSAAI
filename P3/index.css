@@ -22,8 +22,8 @@ body{
 h1{
     font-family: 'TITULO';
     font-size: 700%;
-    color: rgb(241, 3, 202);
-    text-decoration: underline rgb(241, 3, 202);
+    color: #FF33FF;
+    text-decoration: underline #FF33FF;
 }
 
 h2{
@@ -37,7 +37,13 @@ canvas{
     background-color:rgba(0,0,0, 0.5);
     display: block;
     border-radius: 5px;
+    border: rgb(0, 255, 213) 1px ridge;
+    
 }
+
+
+
+
 
 .btn{
     cursor: pointer;
