@@ -139,7 +139,7 @@ function movePaddle() {
 
 function moveBall() {
 
-    if(startGame = true){
+    if(startGame){
         ball.x += ball.dx;
         ball.y += ball.dy;
     } 
