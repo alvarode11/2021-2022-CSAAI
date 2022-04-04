@@ -1,31 +1,29 @@
-//Definiendo todas las variables y constantes que voy a utilizar para la practica
-
 const rulesBtn = document.getElementById('rules-btn');
 const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+var startGame = false;
+let score = 0;
+const brickRowCount = 9;
+const brickColumnCount = 5;
+let vidas = 3
+let microsegundos = 0;
+let segundos = 0;
+let minutos = 0;
 const music = new Audio('laser.mp3');
 const musica = new Audio('pum.mp3');
 const MUSICA = new Audio('gameover.mp3');
 const MUSIC = new Audio('error.mp3');
-var startGame = false;
-let score = 0;
-let microsegundos = 0;
-let segundos = 0;
-let minutos = 0;
-let vidas = 3;
-const brickRowCount = 9;
-const brickColumnCount = 5;
 
-//Creando pelotita
 
+//Create ball props
 const ball = {
     x: canvas.width / 2,
-    y: canvas.height / 2 +270,
-    size: 15,
+    y: canvas.height / 2 +267,
+    size: 12.5,
     speed: 4,
-    dx: 1.5,
+    dx: 3.5,
     dy: -4
 };
 
@@ -35,13 +33,12 @@ const paddle = {
     x: canvas.width / 2 -40,
     y:canvas.height - 20,
     w: 80,
-    h: 10,
+    h: 16,
     speed: 8,
     dx: 0
 };
 
-//Definiendo caracteristicas de cada
-
+//Create brick props
 const brickInfo = {
     w: 70,
     h: 20,
@@ -51,9 +48,8 @@ const brickInfo = {
     visible: true
 };
 
-//Creando los ladrillos
-
-const bricks = [];
+//Create bricks
+var bricks = [];
 for (let i = 0; i < brickRowCount; i++){
     bricks[i] = [];
     for(let j= 0; j< brickColumnCount; j++){
@@ -63,39 +59,53 @@ for (let i = 0; i < brickRowCount; i++){
     }
 }
 
-//Dibujando la pelotita dentro del canvas
 
+
+//Draw ball on canvas
 function drawBall() {
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-    ctx.fillStyle = '#3399FF';
+    ctx.fillStyle = '#33FF99';
     ctx.fill();
     ctx.closePath();
 }
 
-//Dibujando la raqueta dentro del canvas
-
+//Draw paddle on canvas
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
-    ctx.fillStyle = '#00FFCC';
+    ctx.fillStyle = '#6699FF';
     ctx.fill();
     ctx.closePath();
 }
 
-//Dibujando la puntuacion dentro del canvas
-
+//Draw Score on canvas
 function drawScore(){
     ctx.font = '20px Arial';
+    ctx.fillStyle = '#33FF99'
     ctx.fillText(`Score: ${score}` , canvas.width - 100, 30);
 }
 
-//Dibujando las vidas dentro del canvas
-
 function drawVidas() {
     ctx.font = '20px Arial';
-    ctx.fillText(`Vidas: ${vidas}`, canvas.width-750, 30);
+    ctx.fillStyle = '#33FF99'
+    ctx.fillText(`Vidas: ${vidas}`, canvas.width - 750, 30);
 }
+
+//Draw bricks on canvas
+function drawBricks(){
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            ctx.beginPath();
+            ctx.rect(brick.x, brick.y, brick.w, brick.h);
+            ctx.fillStyle = brick.visible ? '#6699FF' : 'transparent';
+            ctx.fill();
+            ctx.closePath();
+        });
+    });
+}
+
+
 
 //Funcion que calculara el tiempo 
 
@@ -125,31 +135,16 @@ function time(){
 
 function cronometro(){
     ctx.font = "20px Arial";
+    ctx.fillStyle = '#33FF99'
     ctx.fillText('Tiempo: ', 355, 30);
     ctx.fillText(minutos + ':' + segundos, 435, 30);
 }
 
-//Dibujando los ladrillos dentro del canvas
-
-function drawBricks(){
-    bricks.forEach(column => {
-        column.forEach(brick => {
-            ctx.beginPath();
-            ctx.rect(brick.x, brick.y, brick.w, brick.h);
-            ctx.fillStyle = brick.visible ?'#00FFCC': 'transparent';
-            ctx.fill();
-            ctx.closePath();
-        });
-    });
-}
-
-//Movimiento de la raqueta
-
+//Move paddle on canvas
 function movePaddle() {
     paddle.x += paddle.dx;
 
-    //Detecta las paredes del canvas
-
+    //Wall detection
     if(paddle.x + paddle.w > canvas.width){
         paddle.x = canvas.width - paddle.w;
     }
@@ -159,28 +154,23 @@ function movePaddle() {
     }
 }
 
-//Movimiento de la pelotita en el canvas
-
+//Move ball on canvas
 function moveBall() {
     if (startGame){
-    ball.x += ball.dx;
-    ball.y += ball.dy;
-    } 
-
-    //Colision con las paredes laterales del canvas
-
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+        } 
+    //Wall collision (right/left)
     if(ball.x + ball.size > canvas.width || ball.x - ball.size < 0){
-        ball.dx *= -1; 
+        ball.dx *= -1; //ball.dx = ball.dx * -1
     }
 
-    //Colision con el suelo y el techo del canvas
-
+    //wall collision (top/bottom)
     if(ball.y + ball.size > canvas.height || ball.y - ball.size <0){
         ball.dy *= -1; 
     }
     
-    //Colision con la raqueta
-
+    //Paddle Collision
     if(
         ball.x - ball.size > paddle.x &&
         ball.x + ball.size < paddle.x + paddle.w &&
@@ -190,45 +180,59 @@ function moveBall() {
         MUSIC.play();
     }
 
-    //Colision con los ladrillos
-
+    //Brick collision
     bricks.forEach(column => {
         column.forEach(brick => {
             if(brick.visible){
                 if(
-                    ball.x - ball.size > brick.x && 
-                    ball.x + ball.size < brick.x  + brick.w && 
-                    ball.y + ball.size > brick.y && 
-                    ball.y - ball.size < brick.y  + brick.h 
+                    ball.x - ball.size > brick.x && //left brick side check
+                    ball.x + ball.size < brick.x  + brick.w && //right brick side check
+                    ball.y + ball.size > brick.y && //top brick side check
+                    ball.y - ball.size < brick.y  + brick.h //bottom brick side check
                 ){
                     ball.dy *= -1;
                     brick.visible = false;
-                    musica.play();
                     increaseScore();
+                    musica.play();
                 }
             }
         });
     });
 
-    //Si la pelotita toca el suelo pierdes
-
+    //Hit Bottom Wall -Lose
     if(ball.y + ball.size > canvas.height) {
         vidas = vidas - 1;
         music.play();
+
+        ball.x = canvas.width / 2,
+        ball.y = canvas.height / 2 +267,
+        ball.size = 12.5,
+        ball.speed = 4,
+        ball.dx = 3.5,
+        ball.dy = -4
+
+        paddle.x =  canvas.width / 2 -40,
+        paddle.y = canvas.height - 20,
+        paddle.w = 80,
+        paddle.h = 16,
+        paddle.speed = 8,
+        paddle.dx = 0
+
+        startGame=false;
+
         if(vidas ==0){
 
             MUSICA.play();
             alert('GAME OVER')
                         document.location.reload();
         }
-        showAllBricks();
-        score = 0;
 
+        score = score;
+        
     }
 }
 
-//Funcion para la puntuacion
-
+//Increase score
 function increaseScore() {
     score++;
 
@@ -237,30 +241,30 @@ function increaseScore() {
     }
 }
 
-//Muestra todos los ladrillos a la vez
-
+//Make all bricks appear
 function showAllBricks() {
     bricks.forEach(column => {
         column.forEach(brick => (brick.visible = true));
     });
 }
 
-//Procedemos a dibujar todo lo anterior en el canvas
-
+//Draw everything 
 function draw() {
-   
+    //clear canvas
+
     ctx.clearRect(0,0,canvas.width, canvas.height);
 
     drawBall();
     drawPaddle();
     drawScore();
-    drawBricks();
     drawVidas();
     cronometro();
+    drawBricks();
+    
+    
 }
 
-//Funcion para todo aquello que no es constante y necesita de actualizarse
-
+//Update canvas drawing and animation
 function update() {
     movePaddle();
     moveBall();
@@ -271,7 +275,7 @@ function update() {
 
 update();
 
-//Evento al presionar una tecla
+//Keydown event
 
 function Keydown(ev) {
     switch (ev.keyCode) {
@@ -317,13 +321,10 @@ function Keyup(ev){
     }
 
 }
-
-//Llamando a los eventos del teclado
-
+//Keyboard evant hanlers
 document.addEventListener('keydown', Keydown);
 document.addEventListener('keyup', Keyup);
 
-//Eventos para los botones de las reglkas que se mostraran por pantalla
-
+//Rules and close event handlers 
 rulesBtn.addEventListener('click', () => rules.classList.add('show'));
 closeBtn.addEventListener('click', () => rules.classList.remove('show'));

@@ -22,8 +22,8 @@ body{
 h1{
     font-family: 'TITULO';
     font-size: 700%;
-    color: #FF33FF;
-    text-decoration: underline #FF33FF;
+    color: #33FFFF;
+    text-decoration: underline #33FFFF;
 }
 
 h2{
@@ -38,10 +38,27 @@ canvas{
     display: block;
     border-radius: 5px;
     border: rgb(0, 255, 213) 1px ridge;
+    box-shadow: 0 0 1px 1px rgba(0, 255, 213, 2.5);
     
 }
 
 
+#gif{
+
+    float :left;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+    margin-left: -53%;
+    margin-top: -60%;
+
+}
+
+#gif1{
+
+    float :right;
+    box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
+    margin-right: -54%;
+    margin-top: -69%
+}
 
 
 
