@@ -1,3 +1,5 @@
+//Definiendo todas las variables y constantes que voy a utilizar para la practica
+
 const rulesBtn = document.getElementById('rules-btn');
 const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
@@ -12,12 +14,14 @@ let microsegundos = 0;
 let segundos = 0;
 let minutos = 0;
 const music = new Audio('laser.mp3');
+const MuSiCa = new Audio('victoria.mp3');
 const musica = new Audio('pum.mp3');
 const MUSICA = new Audio('gameover.mp3');
 const MUSIC = new Audio('error.mp3');
 
 
-//Create ball props
+//Creando la pelotita
+
 const ball = {
     x: canvas.width / 2,
     y: canvas.height / 2 +267,
@@ -38,7 +42,8 @@ const paddle = {
     dx: 0
 };
 
-//Create brick props
+//Definiendo caracteristicas de cada ladrillito
+
 const brickInfo = {
     w: 70,
     h: 20,
@@ -48,7 +53,8 @@ const brickInfo = {
     visible: true
 };
 
-//Create bricks
+//Creando ladrillitos
+
 var bricks = [];
 for (let i = 0; i < brickRowCount; i++){
     bricks[i] = [];
@@ -61,7 +67,8 @@ for (let i = 0; i < brickRowCount; i++){
 
 
 
-//Draw ball on canvas
+//Dibujando la pelotita dentro del canvas
+
 function drawBall() {
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
@@ -70,7 +77,8 @@ function drawBall() {
     ctx.closePath();
 }
 
-//Draw paddle on canvas
+//Dibujando la raqueta dentro del canvas
+
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
@@ -79,12 +87,15 @@ function drawPaddle() {
     ctx.closePath();
 }
 
-//Draw Score on canvas
+//Dibujando la puntuacion dentro del canvas
+
 function drawScore(){
     ctx.font = '20px Arial';
     ctx.fillStyle = '#33FF99'
     ctx.fillText(`Score: ${score}` , canvas.width - 100, 30);
 }
+
+//Dibujando las vidas dentro del canvas
 
 function drawVidas() {
     ctx.font = '20px Arial';
@@ -92,7 +103,8 @@ function drawVidas() {
     ctx.fillText(`Vidas: ${vidas}`, canvas.width - 750, 30);
 }
 
-//Draw bricks on canvas
+//Dibujando los ladrillitos dentro del canvas
+
 function drawBricks(){
     bricks.forEach(column => {
         column.forEach(brick => {
@@ -110,6 +122,7 @@ function drawBricks(){
 //Funcion que calculara el tiempo 
 
 function time(){
+    if (startGame){ 
     microsegundos ++;
     if(microsegundos === 100){
         microsegundos = 0;
@@ -130,6 +143,7 @@ function time(){
     }
 
 }
+}
 
 //Dibujando el cronometro dentro del canvas
 
@@ -140,11 +154,13 @@ function cronometro(){
     ctx.fillText(minutos + ':' + segundos, 435, 30);
 }
 
-//Move paddle on canvas
+//Movimiento de la raqueta
+
 function movePaddle() {
     paddle.x += paddle.dx;
 
-    //Wall detection
+    //Deteccion de las paredes laterales del canvas
+
     if(paddle.x + paddle.w > canvas.width){
         paddle.x = canvas.width - paddle.w;
     }
@@ -154,23 +170,28 @@ function movePaddle() {
     }
 }
 
-//Move ball on canvas
+//Moveimiento de la pelotita dentro del canvas
+
 function moveBall() {
     if (startGame){
         ball.x += ball.dx;
         ball.y += ball.dy;
         } 
-    //Wall collision (right/left)
+
+    //Colision con las paredes laterales del canvas
+
     if(ball.x + ball.size > canvas.width || ball.x - ball.size < 0){
-        ball.dx *= -1; //ball.dx = ball.dx * -1
+        ball.dx *= -1; 
     }
 
-    //wall collision (top/bottom)
+    //Colision con la pared superior e inferior del canvas
+
     if(ball.y + ball.size > canvas.height || ball.y - ball.size <0){
         ball.dy *= -1; 
     }
     
-    //Paddle Collision
+    //Colision con la raqueta
+
     if(
         ball.x - ball.size > paddle.x &&
         ball.x + ball.size < paddle.x + paddle.w &&
@@ -180,26 +201,36 @@ function moveBall() {
         MUSIC.play();
     }
 
-    //Brick collision
+    //Colision con cada ladrillo
+
     bricks.forEach(column => {
         column.forEach(brick => {
             if(brick.visible){
                 if(
-                    ball.x - ball.size > brick.x && //left brick side check
-                    ball.x + ball.size < brick.x  + brick.w && //right brick side check
-                    ball.y + ball.size > brick.y && //top brick side check
-                    ball.y - ball.size < brick.y  + brick.h //bottom brick side check
+                    ball.x - ball.size > brick.x && 
+                    ball.x + ball.size < brick.x  + brick.w && 
+                    ball.y + ball.size > brick.y && 
+                    ball.y - ball.size < brick.y  + brick.h 
                 ){
                     ball.dy *= -1;
                     brick.visible = false;
                     increaseScore();
+                    if (score ==  brickRowCount *brickColumnCount ){
+
+                        
+                        alert('HAS GANADO BIEEEEEEN')
+                                    document.location.reload();
+                                    MuSiCa.play();
+
+                    }
                     musica.play();
                 }
             }
         });
     });
 
-    //Hit Bottom Wall -Lose
+    //Si la pelotita toca la pared inferir del canvas pierdes una vida
+
     if(ball.y + ball.size > canvas.height) {
         vidas = vidas - 1;
         music.play();
@@ -222,6 +253,8 @@ function moveBall() {
 
         if(vidas ==0){
 
+            // Si te quedas sin vidas pierdes la partida
+
             MUSICA.play();
             alert('GAME OVER')
                         document.location.reload();
@@ -232,7 +265,8 @@ function moveBall() {
     }
 }
 
-//Increase score
+//Incremento de la puntuacion
+
 function increaseScore() {
     score++;
 
@@ -241,16 +275,17 @@ function increaseScore() {
     }
 }
 
-//Make all bricks appear
+//Muestra todos los ladrillos a la vez
+
 function showAllBricks() {
     bricks.forEach(column => {
         column.forEach(brick => (brick.visible = true));
     });
 }
 
-//Draw everything 
+//Procedemos a mostrar todo lo anterior ya situado en el canvas
+
 function draw() {
-    //clear canvas
 
     ctx.clearRect(0,0,canvas.width, canvas.height);
 
@@ -261,10 +296,11 @@ function draw() {
     cronometro();
     drawBricks();
     
-    
+
 }
 
-//Update canvas drawing and animation
+//Funciones que requieren de actualizaciones de eventos durante el funcionamiento del juego
+
 function update() {
     movePaddle();
     moveBall();
@@ -275,7 +311,7 @@ function update() {
 
 update();
 
-//Keydown event
+//Evento de presionar una tecla
 
 function Keydown(ev) {
     switch (ev.keyCode) {
@@ -321,10 +357,13 @@ function Keyup(ev){
     }
 
 }
-//Keyboard evant hanlers
+
+//Llam a los eventos del teclado
+
 document.addEventListener('keydown', Keydown);
 document.addEventListener('keyup', Keyup);
 
-//Rules and close event handlers 
+//Eventos para los botones de las instrucciones 
+
 rulesBtn.addEventListener('click', () => rules.classList.add('show'));
 closeBtn.addEventListener('click', () => rules.classList.remove('show'));
