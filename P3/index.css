@@ -20,21 +20,31 @@ body{
     src: url(Arcade.ttf)
 }
 
+
+p1{
+    background: linear-gradient(to right, rgb(238, 89, 89),rgb(241, 179, 64),rgb(243, 243, 104),rgb(128, 250, 128),rgb(0, 153, 255),rgb(230, 102, 247),rgb(236, 162, 236));
+    -webkit-background-clip: text; 
+    color: transparent;  
+}
+
+
 h1{
     font-family: 'TITULO';
     font-size: 700%;
-    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    background: linear-gradient(to right, red,orange,yellow,rgb(83, 255, 83),rgb(63, 63, 255),rgb(144, 21, 231),violet);
     -webkit-background-clip: text;
     color: transparent;  
-    text-decoration: underline #33FFFF;
+    text-decoration: underline #fd00e8;
     margin-top: -5%
 }
 
 h2{
     font-family: 'TITULO';
+    background: linear-gradient(to right, red,orange,yellow,rgb(83, 255, 83),rgb(63, 63, 255),rgb(144, 21, 231),violet);
+    -webkit-background-clip: text;
+    color: transparent;  
     font-size: 200%;
-    color: rgb(255, 255, 255);
-    text-decoration: underline rgb(255, 255, 255);
+    text-decoration: underline #fd00e8;
 }
 
 canvas{
@@ -51,8 +61,8 @@ canvas{
 
     float :left;
     box-shadow: 0 0 3px 3px rgba(0, 255, 213, 2.5);
-    margin-left: -53%;
-    margin-top: -60%;
+    margin-left: -54%;
+    margin-top: -69%;
 
 }
 
@@ -71,8 +81,10 @@ canvas{
     font-size: 100%;
     border: 0;
     padding: 10px 20px;
-    background: rgb(2, 250, 221);
-    color: rgb(7, 7, 7);
+    background: linear-gradient(to right, rgb(238, 89, 89),rgb(241, 179, 64),rgb(243, 243, 104),rgb(128, 250, 128),rgb(0, 153, 255),rgb(230, 102, 247),rgb(236, 162, 236));
+    background-clip: text;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
 }
 

@@ -5,18 +5,30 @@ const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
 canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-var grd = ctx.createLinearGradient(10,75,900,75);
+var grd = ctx.createLinearGradient(10,75,750,75);
+var GRD = ctx.createLinearGradient(10,75,750,75);
+
+GRD.addColorStop(0, "rgb(236, 162, 236)");
+GRD.addColorStop(0.1666666666666667, "rgb(230, 102, 247)");
+GRD.addColorStop(0.3333333333333333, "rgb(0, 153, 255)");
+GRD.addColorStop(0.5, "rgb(128, 250, 128)");
+GRD.addColorStop(0.6666666666666667, "rgb(243, 243, 104)");
+GRD.addColorStop(0.8333333333333334, "rgb(241, 179, 64)");
+GRD.addColorStop(1, "rgb(238, 89, 89)");
+
 grd.addColorStop(0, "red");
-grd.addColorStop(0.24, "orange");
-grd.addColorStop(0.42, "yellow");
-grd.addColorStop(0.56, "green");
-grd.addColorStop(0.70, "blue");
-grd.addColorStop(0.84, "indigo");
+grd.addColorStop(0.1666666666666667, "orange");
+grd.addColorStop(0.3333333333333333, "yellow");
+grd.addColorStop(0.5, "green");
+grd.addColorStop(0.6666666666666667, "rgb(63, 63, 255)");
+grd.addColorStop(0.8333333333333334, "rgb(144, 21, 231)");
 grd.addColorStop(1, "violet");
+
 var startGame = false;
 let score = 0;
 const brickRowCount = 9;
 const brickColumnCount = 5;
+var num = Math.floor((Math.random() * (9))-4);
 let vidas = 3
 let microsegundos = 0;
 let segundos = 0;
@@ -35,7 +47,7 @@ const ball = {
     y: canvas.height / 2 +267,
     size: 12.5,
     speed: 4,
-    dx: 3.5,
+    dx: num,
     dy: -4
 };
 
@@ -73,14 +85,12 @@ for (let i = 0; i < brickRowCount; i++){
     }
 }
 
-
-
 //Dibujando la pelotita dentro del canvas
 
 function drawBall() {
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-    ctx.fillStyle = '#33FF99';
+    ctx.fillStyle = '#CC0066';
     ctx.fill();
     ctx.closePath();
 }
@@ -90,7 +100,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
-    ctx.fillStyle = grd;
+    ctx.fillStyle = GRD;
     ctx.fill();
     ctx.closePath();
 }
@@ -98,17 +108,17 @@ function drawPaddle() {
 //Dibujando la puntuacion dentro del canvas
 
 function drawScore(){
-    ctx.font = '20px Arial';
-    ctx.fillStyle = '#33FF99'
-    ctx.fillText(`Score: ${score}` , canvas.width - 100, 30);
+    ctx.font = 'bold 22px Arial';
+    ctx.fillStyle = '#66CCFF'
+    ctx.fillText(`SCORE: ${score}` , canvas.width - 150, 30);
 }
 
 //Dibujando las vidas dentro del canvas
 
 function drawVidas() {
-    ctx.font = '20px Arial';
-    ctx.fillStyle = '#33FF99'
-    ctx.fillText(`Vidas: ${vidas}`, canvas.width - 750, 30);
+    ctx.font = 'bold 22px Arial';
+    ctx.fillStyle = '#66CCFF'
+    ctx.fillText(`VIDAS: ${vidas}`, canvas.width - 750, 30);
 }
 
 //Dibujando los ladrillitos dentro del canvas
@@ -124,8 +134,6 @@ function drawBricks(){
         });
     });
 }
-
-
 
 //Funcion que calculara el tiempo 
 
@@ -156,10 +164,10 @@ function time(){
 //Dibujando el cronometro dentro del canvas
 
 function cronometro(){
-    ctx.font = "20px Arial";
-    ctx.fillStyle = '#33FF99'
-    ctx.fillText('Tiempo: ', 355, 30);
-    ctx.fillText(minutos + ':' + segundos, 435, 30);
+    ctx.font = "bold 22px Arial";
+    ctx.fillStyle = '#66CCFF'
+    ctx.fillText('TIEMPO:', 340, 30);
+    ctx.fillText(minutos + ':' + segundos, 437, 30);
 }
 
 //Movimiento de la raqueta
@@ -205,7 +213,10 @@ function moveBall() {
         ball.x + ball.size < paddle.x + paddle.w &&
         ball.y + ball.size > paddle.y
     ){
+        
         ball.dy = -ball.speed;
+        var num = Math.floor((Math.random() * (9))-4);
+        ball.dx = num;
         MUSIC.play();
     }
 
@@ -242,12 +253,12 @@ function moveBall() {
     if(ball.y + ball.size > canvas.height) {
         vidas = vidas - 1;
         music.play();
-
+        var num = Math.floor((Math.random() * (9))-4);
         ball.x = canvas.width / 2,
         ball.y = canvas.height / 2 +267,
         ball.size = 12.5,
         ball.speed = 4,
-        ball.dx = 3.5,
+        ball.dx = num,
         ball.dy = -4
 
         paddle.x =  canvas.width / 2 -40,
