@@ -3,8 +3,16 @@
 const rulesBtn = document.getElementById('rules-btn');
 const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
-const canvas = document.getElementById('canvas');
+canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+var grd = ctx.createLinearGradient(10,75,900,75);
+grd.addColorStop(0, "red");
+grd.addColorStop(0.24, "orange");
+grd.addColorStop(0.42, "yellow");
+grd.addColorStop(0.56, "green");
+grd.addColorStop(0.70, "blue");
+grd.addColorStop(0.84, "indigo");
+grd.addColorStop(1, "violet");
 var startGame = false;
 let score = 0;
 const brickRowCount = 9;
@@ -82,7 +90,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
-    ctx.fillStyle = '#6699FF';
+    ctx.fillStyle = grd;
     ctx.fill();
     ctx.closePath();
 }
@@ -110,7 +118,7 @@ function drawBricks(){
         column.forEach(brick => {
             ctx.beginPath();
             ctx.rect(brick.x, brick.y, brick.w, brick.h);
-            ctx.fillStyle = brick.visible ? '#6699FF' : 'transparent';
+            ctx.fillStyle = brick.visible ? grd: 'transparent';
             ctx.fill();
             ctx.closePath();
         });

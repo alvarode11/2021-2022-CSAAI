@@ -13,6 +13,7 @@ body{
     margin: 0;
 }
 
+
 @font-face
 {
     font-family: 'TITULO';
@@ -22,7 +23,9 @@ body{
 h1{
     font-family: 'TITULO';
     font-size: 700%;
-    color: #33FFFF;
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    -webkit-background-clip: text;
+    color: transparent;  
     text-decoration: underline #33FFFF;
     margin-top: -5%
 }
