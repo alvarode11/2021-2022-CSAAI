@@ -1,0 +1,98 @@
+
+
+body{
+
+background-image: url('fondo.jpg');
+
+}
+
+.div1 {
+    float: left;
+    
+}
+
+.div2 {
+    float: right;
+    margin-right: 17cm;
+    margin-top: 5cm;
+}
+
+#canvas {
+    border: solid;
+    border-color: black;
+    border-width: 0.1cm;
+   
+    text-align: right;
+    
+}
+
+#parrafo1 {
+  
+    font-size: 20px;
+    color: crimson;
+    margin-left: 4cm;
+}
+
+#parrafo2 {
+    
+    font-size: 20px;
+    color: crimson;
+    margin-left: 4cm;
+}
+
+#parrafo3 {
+    
+    
+    font-size: 20px;
+    color: crimson;
+    text-align: center;
+    
+}
+
+
+
+img {
+    border: solid;
+    border-color: black;
+    border-width: 0.1cm;
+}
+
+#r {
+    margin-left: 1cm;
+    
+}
+
+#g {
+    margin-left: 1cm;
+}
+
+#b {
+    margin-left: 1cm;
+}
+
+#botonimagen1 {
+    
+    font-size: 14px;
+    border: solid;
+    border-color: black;
+    border-width: 0.1cm;
+}
+
+
+#botonimagen2 {
+    
+    font-size: 14px;
+    border: solid;
+    border-color: black;
+    border-width: 0.1cm;
+}
+
+
+.boton {
+    
+    font-size: 14px;
+    margin-left: 0.8cm;
+    border: solid;
+    border-color: black;
+    border-width: 0.1cm;
+}
