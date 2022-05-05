@@ -23,10 +23,6 @@ const botonimagen2 = document.getElementById('botonimagen2');
 //-- lleva un tiempo. Sólo podemos acceder a ella una vez
 //-- que esté totalmente cargada
 img.onload = function () {
-
-    r.style.display = "none";
-    g.style.display = "none";
-    b.style.display = "none";
   //-- Se establece como tamaño del canvas el mismo
   //-- que el de la imagen original
   canvas.width = img.width;
