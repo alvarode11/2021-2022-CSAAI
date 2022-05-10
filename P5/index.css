@@ -1,7 +1,9 @@
 body{
     text-align: center;
-    background-color: black;
+
+    background-image: url('fondo.jpg');      
 }
+
 .button {
     background-color: #4c7aaf;
     border: none;
