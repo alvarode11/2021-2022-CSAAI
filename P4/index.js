@@ -1,6 +1,3 @@
-console.log("Ejecutando JS....")
-
-//-- Obtener elementos del DOM
 const canvas = document.getElementById('canvas');
 var img = document.getElementById('isaac');
 const ctx = canvas.getContext('2d');
@@ -18,13 +15,9 @@ const vint = document.getElementById('vintage');
 const botonimagen1 = document.getElementById('botonimagen1');
 const botonimagen2 = document.getElementById('botonimagen2');
 
-//-- Función de retrollamada de imagen cargada
-//-- La imagen no se carga instantaneamente, sino que
-//-- lleva un tiempo. Sólo podemos acceder a ella una vez
-//-- que esté totalmente cargada
+
 img.onload = function () {
-  //-- Se establece como tamaño del canvas el mismo
-  //-- que el de la imagen original
+
   canvas.width = img.width;
   canvas.height = img.height;
 
@@ -153,9 +146,7 @@ function colores () {
 
     let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    //-- Obtener el array con todos los píxeles
-    //let data = imgData.data;
-
+ 
     ctx.putImageData(imgData, 0, 0);
 }
 
@@ -168,7 +159,6 @@ function negativo () {
 
     let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    //-- Obtener el array con todos los píxeles
     let data = imgData.data;
 
     for (let i=0; i< data.length; i+=4) {
@@ -190,7 +180,6 @@ function vintage () {
 
     let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    //-- Obtener el array con todos los píxeles
     let data = imgData.data;
 
     for (let i=0; i< data.length; i+=4) {
@@ -203,4 +192,3 @@ function vintage () {
 
 }
 
-console.log("Fin...");
